@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If the USB fits, will it work? - Jenny Fung</title>
+
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+    
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Jenny Fung">
+    <link rel="alternate" href="/feed.json" type="application/json" title="Jenny Fung">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    
+  <meta property="og:type" content="website">
+<meta property="og:site_name" content="Jenny Fung">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="If the USB fits, will it work?">
+<meta property="og:description" content="Here, I blog and share some creative work. Posts are tagged for organization and filtering but are otherwise the gang's all here.">
+<meta property="og:url" content="http://localhost/posts/usb-problem/">
+<meta property="og:image" content="http://localhost/media/chargingdock.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Here, I blog and share some creative work. Posts are tagged for organization and filtering but are otherwise the gang's all here.">
+</head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar-home">
+        <strong>Jenny Fung</strong>
+      </a>
+
+      <ul class="navbar-links">
+        <li>
+          <a href="/posts/">
+            Posts
+          </a>
+        </li>
+        <li>
+          <a href="/archive/">
+            Archive
+          </a>
+        </li>
+      <li>
+        <a href="https://drive.google.com/file/d/1Vtk8OiGJlqWWBHI7DEpkx3G58QblsbFr/view" ref="noreferrer" target="_blank">
+          Resume
+        </a>
+      </li>
+      </ul>
+    </nav>
+
+    <main class="body-post">
+      <article class="post" data-pagefind-body="" data-title="If the USB fits, will it work?" data-pagefind-index-attrs="data-title">
+  <header class="post-header">
+    <h1 class="post-title">If the USB fits, will it work?</h1>
+
+    <div class="post-details">
+  <p>
+    <time datetime="2023-05-08 10:10:10">
+      May 8th, 2023
+    </time>
+  </p>
+
+  <p>4 min read</p>
+
+  <div class="post-tags">
+    
+      
+
+      
+        <a data-pagefind-filter="filter" class="badge" href="/archive/technology/">Technology</a>
+      
+    
+      
+
+      
+        <a data-pagefind-filter="filter" class="badge" href="/archive/hardware/">Hardware</a>
+      
+    
+      
+
+      
+        <a data-pagefind-filter="filter" class="badge" href="/archive/communication/">Communication</a>
+      
+    
+  </div>
+</div>
+
+  </header>
+
+  
+  <nav class="toc">
+    <h2>Table of contents</h2>
+    <ol>
+      
+      <li>
+        <a href="#the-problem">The Problem</a>
+
+        
+      </li>
+      
+      <li>
+        <a href="#isolating-the-problem">Isolating the problem</a>
+
+        
+      </li>
+      
+      <li>
+        <a href="#a-brief-deep-dive-into-usbs">A Brief Deep Dive into USBs</a>
+
+        
+      </li>
+      
+      <li>
+        <a href="#resolution">Resolution</a>
+
+        
+      </li>
+      
+    </ol>
+  </nav>
+  
+
+  <div class="post-body body">
+    <h3 id="the-problem" tabindex="-1"><a href="#the-problem" class="header-anchor">The Problem</a></h3>
+<p>While I was traveling recently, I encountered an interesting technical problem. As someone who likes to travel light, I consolidated all of my cords and plugs into the fewest types that in shape would work across all of my smaller devices. Specifically, I packed a USB C-C cord and a USB-C adapter plug. This was not necessarily the usual setup I had for each at home.</p>
+<p><img src="/media/chargingdock.png" alt="My multi-device charging dock"></p>
+<!--more-->
+<p>During my layover, I tried to charge both my phone and my watch using my charging dock, which has a C port. To my surprise, I couldn't get any juice! I wondered if it was just the janky, wobbly airport outlet, but fortunately, a kind passenger lent me an A-C cord, which worked perfectly when plugged directly into an A outlet. Phew! I was able to charge my devices briefly before boarding the plane.</p>
+<p>But when I tried to use that same A-C cord on several seatback A ports on the plane, it didn't work at all. I was puzzled, but I just brushed it off as the outlets being fickle. After all, I was trapped on a plane, and there wasn't much I could do about it.</p>
+<p><img src="/media/blocktoy.jpeg" alt="A child and their block toy"></p>
+<p>Up until now, I've always thought of USBs like a kid's block toy. If it fits, it should work, right? But the evidence was showing me that maybe it's not so simple.</p>
+<p>I had the impulse to throw the problem away and start fresh – I searched online to buy a new dock. However, I was pretty sure the dock itself was not broken since it worked well at the airport. I suspected this was a solvable technical problem. I removed the item from my cart.</p>
+<h3 id="isolating-the-problem" tabindex="-1"><a href="#isolating-the-problem" class="header-anchor">Isolating the problem</a></h3>
+<p>First, I needed to verify that my tools were not broken. I tested the C-C cord and C adapter on my laptop, which charged successfully, although slowly. I confirmed that the cord and adapter were functional.</p>
+<p>Next, I needed to determine whether my dock had compatibility issues. I dug deep into my Amazon order history for the item listing. I checked the device documentation and specs and noticed that the dock came with an A-C cord and a 15W USB-A adapter. These are what I used at home without issue until the day before.</p>
+<p>I double-checked the C adapter output and saw that it was ~15W.</p>
+<p>So each component was functioning and appropriate, just not together for some reason.</p>
+<h3 id="a-brief-deep-dive-into-usbs" tabindex="-1"><a href="#a-brief-deep-dive-into-usbs" class="header-anchor">A Brief Deep Dive into USBs</a></h3>
+<p>The Universal Serial Bus (USB) was created collaboratively by major computer companies to standardize connecting peripheral devices to a computer. <a href="https://www.eetimes.com/do-you-remember-the-world-before-usb/">Before USB</a>, there were too many options of connectors that peripheral devices could use, and some required manual configuration on the computer. This was especially cumbersome for end-users like you and me.</p>
+<p>Nowadays (in 2023), there are many types of USBs available. The most popular ones are A and C. Additionally, there are B and micro versions of A, B for the smallest single-board computers like Raspberry Pis and Arduinos. The standards governing body for USBs, the <a href="https://www.usb.org/">USB-IF</a>, upgrades the USB build specification over time. As of 2019, the version is 4.0.</p>
+<p>Newer versions are speedier (in terms of data transfer and charging) by using more modern hardware and/or adding pins, but all versions remain usable. I should note to myself to consider replacing my USB cords with those supplied with newly purchased devices.</p>
+<p>While the USB's wide adoption by device manufacturers changed the game for consumers to "plug and play", it turns out that not all USBs are made equal. While USBs have a specification, manufacturers can interpret it differently. Additionally, there is no product compliance body that quality checks if USBs are made equally. This can lead to behavioral inconsistency and the ability to cut corners in the hardware.</p>
+<p>USB-C is on track to become the standard USB type. In 2022, the <a href="https://www.macrumors.com/2022/10/24/eu-gives-final-approval-to-usb-c-law/">E.U famously passed a law</a> mandating companies (such as Apple) to switch to USB-C on technically-compatible devices starting in 2024.</p>
+<p>Power can flow either way between devices connected via USB-C, with the important caveat that the devices themselves must decide which will act as either the power source or sink. This is a crucial communication step that is largely automatic via the USB hardware and relative level of device charge (if both devices have batteries). On <a href="https://qr.ae/pyG0ZH">some devices</a>, the direction of power flow can be chosen by the user. For USB-A, power flow is automatic and unidirectional from the A male plug as part of the spec.</p>
+<p>In the case of my charging dock, I noticed that no power was drawn when using the C-only setup. Charging was successful using an A-C cord direct to socket. My dock was cheaply manufactured and was supplied with an A-C cord, so I suspect that it lacks the C hardware that declares itself the power sink. An electronics hobbyist on Reddit reported solving this with a simple solder job: soldering 5.1k resistor pulldowns onto both pins labelled "CC" on the C female port of his sink device (in my case, the charging dock). This fix was corroborated by descriptions of USB-C <a href="https://www.aliexpress.com/item/1005004848158786.html">boards for sale</a>.</p>
+<h3 id="resolution" tabindex="-1"><a href="#resolution" class="header-anchor">Resolution</a></h3>
+<p><img src="/media/usbsolution.png" alt="As my solution, I purchased an A-C cord and A-C female to male adapter"></p>
+<p>I went to the store and walked away with an A-C cord and an A-C female to male adapter. This way, I could still use my C adapter plug. Now my devices are charging perfectly, so I'm happy with my solution.</p>
+<p>The only mystery left unsolved is why my devices didn't charge on the plane. I think it might have been due to low voltage, but I don't have enough data to support this hypothesis.</p>
+<p>I find communication fascinating in all its forms: between people, between the brain and body, among animals, and, in this case, among technology. I’m glad to have gained this new understanding of an otherwise invisible part of our daily lives.</p>
+
+  </div>
+</article>
+
+<nav class="page-pagination pagination">
+  <ul>
+    <li class="pagination-prev">
+      <a href="/posts/wn-ipayandileave/" rel="prev">
+        <span>← Older post</span>
+        <strong>I pay, and leave (Writing Night)</strong>
+      </a>
+    </li>
+    
+    <li class="pagination-next">
+      <a href="/posts/fringe-festival-planning/" rel="next">
+        <span>Newer post →</span>
+        <strong>How to Plan Your Fringe Festival Attendance</strong>
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+    </main>
+    <div class="footer">
+      Built using <a href="https://lume.land/" target="_blank" rel="noreferrer">Lume</a> and the <a href="https://github.com/lumeland/theme-simple-blog" target="_blank" rel="noreferrer">simple blog theme</a>.
+    </div>
+
+    <!-- Current page: /posts/usb-problem/ -->
+  
+
+</body></html>
